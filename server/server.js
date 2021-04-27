@@ -103,4 +103,4 @@ function emitGameOver(room, winner) {
 	io.sockets.in(room).emit('gameOver', JSON.stringify({ winner }));
 }
 
-httpServer.listen(3000, () => console.log('SERVER RUNNING ON PORT 3000'));
+httpServer.listen(process.env.PORT || 3000);
